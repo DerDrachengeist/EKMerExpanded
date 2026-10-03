@@ -1,0 +1,164 @@
+decisions = {
+	summon_ancestor_ghosts_1 = {
+		only_rulers = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential = {
+			has_submenu_open = no
+			religion = almsivi_old_velothi
+		}
+		
+		allow = {
+            piety = 500
+			TIER = COUNT
+            NOT = { has_earmarked_regiments = ancestor_ghosts_1 }
+    }
+		
+		effect = {
+			piety = -500
+			
+			if = {
+				limit = { NOT = { has_earmarked_regiments = ancestor_ghosts_1 } }
+				
+			capital_scope = {
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						troops = {
+							undead_troop = { 250 500 }
+						}
+						attrition = 0.5
+						maintenance_multiplier = 0
+						reinforces = yes
+						earmark = ancestor_ghosts_1
+					}
+				}
+			}
+		}
+	}
+}
+
+	summon_ancestor_ghosts_2 = {
+		only_rulers = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential = {
+			has_submenu_open = no
+			religion = almsivi_old_velothi
+		}
+		
+		allow = {
+            piety = 500
+			TIER = DUKE
+            NOT = { has_earmarked_regiments = ancestor_ghosts_2 }
+    }
+		
+		effect = {
+			piety = -500
+			
+			if = {
+				limit = { NOT = { has_earmarked_regiments = ancestor_ghosts_2 } }
+				
+			capital_scope = {
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						troops = {
+							undead_troop = { 500 1000 }
+						}
+						attrition = 0.5
+						maintenance_multiplier = 0
+						reinforces = yes
+						earmark = ancestor_ghosts_2
+					}
+				}
+			}
+		}
+	}
+}
+
+	summon_ancestor_ghosts_3 = {
+		only_rulers = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential = {
+			has_submenu_open = no
+			religion = almsivi_old_velothi
+		}
+		
+		allow = {
+            piety = 500
+			TIER = KING
+            NOT = { has_earmarked_regiments = ancestor_ghosts_3 }
+    }
+		
+		effect = {
+			piety = -500
+			
+			if = {
+				limit = { NOT = { has_earmarked_regiments = ancestor_ghosts_3 } }
+				
+			capital_scope = {
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						troops = {
+							undead_troop = { 1000 2000 }
+						}
+						attrition = 0.5
+						maintenance_multiplier = 0
+						reinforces = yes
+						earmark = ancestor_ghosts_3
+					}
+				}
+			}
+		}
+	}
+}
+
+	summon_ancestor_ghosts_4 = {
+		only_rulers = yes
+		is_high_prio = yes
+		ai_check_interval = 12
+		
+		potential = {
+			has_submenu_open = no
+			religion = almsivi_old_velothi
+		}
+		
+		allow = {
+            piety = 500
+			TIER = EMPEROR
+            NOT = { has_earmarked_regiments = ancestor_ghosts_4 }
+    }
+		
+		effect = {
+			piety = -500
+			
+			if = {
+				limit = { NOT = { has_earmarked_regiments = ancestor_ghosts_4 } }
+				
+			capital_scope = {
+				ROOT = {
+					spawn_unit = {
+						province = PREV
+						owner = ROOT
+						troops = {
+							undead_troop = { 1250 2500 }
+						}
+						attrition = 0.5
+						maintenance_multiplier = 0
+						reinforces = yes
+						earmark = ancestor_ghosts_4
+					}
+				}
+			}
+		}
+	}
+}
