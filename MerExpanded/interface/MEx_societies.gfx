@@ -1,0 +1,19 @@
+spriteTypes = {
+	#Thalmor
+	spriteType = {
+		name = "GFX_thalmor_society_ranks"
+		texturefile = "gfx\\interface\\societies\\rank_icons_thalmor.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_mages_society_ranks_highlight"
+		texturefile = "gfx\\interface\\societies\\rank_icons_thalmor_highlight.dds"
+		noOfFrames = 6
+	}
+	spriteType = {
+		name = "GFX_mages_society_ranks_locked"
+		texturefile = "gfx\\interface\\societies\\rank_icons_thalmor_locked.dds"
+		noOfFrames = 6
+	}
+
+}

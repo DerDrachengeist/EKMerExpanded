@@ -1,0 +1,347 @@
+thalmor = {
+	primary_attribute = learning
+	society_ranks_gfx = mages_society_ranks
+	opinion_to_other_members = +10
+	opinion_per_rank_above = +5
+	#sound = hermetic_society_interface
+	non_interference = {
+		always = yes
+	}
+	
+	active = {
+		always = yes
+	}
+	indestructible = yes
+	
+	can_join_society = {
+		is_in_society = no
+		religion = auriel
+		NOT = { has_character_modifier = ek_society_pension }
+		hidden_trigger = {
+			NAND = {
+				ai = yes
+				is_society_rank_full = {
+					society = mages_guild_tamriel
+					rank = 1
+				}
+				liege = {
+					is_playable = no
+				}
+			}
+			NOR = {
+				mercenary = yes
+				holy_order = yes
+				trait = clone
+			}
+		}
+		age = 16
+		controls_religion = no
+		learning = 10
+		
+		trigger_if = {
+			limit = { is_ruler = no }
+			liege = {
+				capital_scope = {
+					OR = {
+						region = nirn_tamriel
+						region = nirn_yokuda
+					}
+				}
+			}
+		}
+		
+		trigger_else = {
+			capital_scope = {
+				OR = {
+					region = nirn_tamriel
+					region = nirn_yokuda
+				}
+			}
+		}
+		
+		NOT = { trait = sload }
+		is_inaccessible_trigger = no
+		OR = {
+			is_not_undead = yes
+			is_unknown_vampire = yes
+		}
+		hidden_trigger = {
+			NOT = { has_character_flag = society_join_block }
+		}
+	}
+
+	show_society = {
+		OR = {
+			religion = auriel
+			AND = {
+				is_ruler = no
+				liege = {
+					capital_scope = {
+						OR = {
+							region = nirn_tamriel
+							region = nirn_yokuda
+						}
+					}
+				}
+			}
+			AND = {
+				is_ruler = yes
+				capital_scope = {
+					OR = {
+						region = nirn_tamriel
+						region = nirn_yokuda
+					}
+				}
+			}
+		}
+	}
+	
+	potential = {
+		general_society_join_conditions = yes
+		age = 16
+		OR = {
+			is_not_undead = yes
+			is_unknown_vampire = yes
+		}
+		hidden_trigger = {
+			NOT = { has_character_flag = society_join_block }
+		}
+		NOR = {
+			holy_order = yes
+			mercenary = yes
+			trait = clone
+		}
+		controls_religion = no
+	}
+	
+	society_rank = {
+		level = 1
+		limit = 100
+		startup_limit = 36
+		modifier = {
+			monthly_character_prestige = 0.01
+		}
+		decisions = {
+			enable_quests_decision
+			study_specialization
+		}
+		powers = {
+			general_training
+			infestation_reduction
+		}
+		
+		custom_tooltip = QUEST_DIFFICULTY_1_6_CT
+	}
+	society_rank = {
+		level = 2
+		limit = 72
+		startup_limit = 24
+		modifier = {
+			monthly_character_prestige = 0.025
+		}
+		decisions = {
+		}
+		
+		custom_tooltip = QUEST_DIFFICULTY_2_6_CT
+	}
+	society_rank = {
+		level = 3
+		limit = 48
+		startup_limit = 12
+		modifier = {
+			monthly_character_prestige = 0.05
+		}
+		decisions = {
+		}
+		
+		custom_tooltip = QUEST_DIFFICULTY_3_6_CT
+	}
+	society_rank = {
+		level = 4
+		limit = 24
+		startup_limit = 8
+		modifier = {
+			monthly_character_prestige = 0.1
+			build_cost_temple_modifier = -0.1
+			build_time_temple_modifier = -0.1
+		}
+		decisions = {
+			mage_lifestyle
+		}
+		
+		custom_tooltip = QUEST_DIFFICULTY_4_6_CT
+	}
+	society_rank = {
+		level = 5
+		limit = 1
+		startup_limit = 1
+		modifier = {
+			monthly_character_prestige = 0.5
+			build_cost_temple_modifier = -0.2
+			build_time_temple_modifier = -0.3
+		}
+	}
+	
+	plots = {
+	}
+	
+	monthly_currency_gain = {
+		name = currency_name_mages_guild_tamriel
+		
+		per_attribute = {
+    		name = learning
+    		value = 0.5
+    	}
+		has_trait = {
+			value = 2
+			trait = diligent
+		}
+		has_trait = {
+			value = 1
+			trait = scholar
+		}
+		has_trait = {
+			value = 1
+			trait = mystic
+		}
+		has_trait = {
+			value = 1
+			trait = erudite
+		}
+		has_trait = {
+			value = 1
+			trait = stubborn
+		}
+		has_trait = {
+			value = 1
+			trait = patient
+		}
+		has_trait = {
+			value = 1
+			trait = genius
+		}
+		has_trait = {
+			value = 1
+			trait = quick
+		}
+		has_trait = {
+			value = 1
+			trait = shrewd
+		}
+		has_trait = {
+			value = 1
+			trait = just
+		}
+		society_rank = {
+			rank = 5
+			value = 10
+		}
+	}
+
+	member_score_per_attribute = 2
+	member_score_per_rank = 100
+
+	member_score = {
+		value = 50
+
+		modifier = {
+			factor = 0.33
+			is_long_lived = yes
+		}
+		modifier = {
+			factor = 2
+			trait = diligent
+		}
+		modifier = {
+			factor = 1.5
+			trait = scholar
+		}
+		modifier = {
+			factor = 1.5
+			trait = mystic
+		}
+		modifier = {
+			factor = 1.5
+			trait = erudite
+		}
+		modifier = {
+			factor = 1.5
+			trait = stubborn
+		}
+		modifier = {
+			factor = 2
+			trait = pure_altmer
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				trait = genius
+				trait = quick
+				trait = shrewd
+			}
+		}
+		modifier = {
+			factor = 1.5
+			trait = just
+		}
+		modifier = {
+			factor = 1.5
+			trait = mage_5
+		}
+	}
+	
+	startup_populate = {
+	    trigger = {
+			ai = yes
+	    	controls_religion = no
+			age = 16
+			religion = auriel
+			is_in_society = no
+			is_dumb_trigger = no
+			is_inaccessible_trigger = no
+			OR = {
+				AND = {
+					is_landed = yes
+					learning = 14
+				}
+				learning = 18
+			}
+			NOT = { trait = sload }
+			OR = {
+				is_not_undead = yes
+				is_unknown_vampire = yes
+			}
+			OR = {
+				AND = {
+					is_ruler = no
+					liege = {
+						capital_scope = {
+							OR = {
+								region = nirn_tamriel
+								region = nirn_yokuda
+							}
+						}
+					}
+				}
+				AND = {
+					is_ruler = yes
+					capital_scope = {
+						OR = {
+							region = nirn_tamriel
+							region = nirn_yokuda
+						}
+					}
+				}
+			}
+			NOR = {
+				higher_tier_than = DUKE
+				mercenary = yes
+				holy_order = yes
+			}
+			NOR = {
+				character = 49700 #Divayth Fyr
+				character = 300499 #Yagrum Bagarn
+			}
+		}
+	}
+}
