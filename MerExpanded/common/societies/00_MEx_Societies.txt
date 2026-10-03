@@ -1,6 +1,6 @@
-thalmor = {
+thalmor_tamriel = {
 	primary_attribute = learning
-	society_ranks_gfx = mages_society_ranks
+	society_ranks_gfx = thalmor_society_ranks
 	opinion_to_other_members = +10
 	opinion_per_rank_above = +5
 	#sound = hermetic_society_interface
@@ -21,7 +21,7 @@ thalmor = {
 			NAND = {
 				ai = yes
 				is_society_rank_full = {
-					society = mages_guild_tamriel
+					society = thalmor_tamriel
 					rank = 1
 				}
 				liege = {
@@ -137,6 +137,7 @@ thalmor = {
 		limit = 72
 		startup_limit = 24
 		modifier = {
+			learning = 1
 			monthly_character_prestige = 0.025
 		}
 		decisions = {
@@ -149,6 +150,7 @@ thalmor = {
 		limit = 48
 		startup_limit = 12
 		modifier = {
+			learning = 2
 			monthly_character_prestige = 0.05
 		}
 		decisions = {
@@ -161,6 +163,8 @@ thalmor = {
 		limit = 24
 		startup_limit = 8
 		modifier = {
+			learning = 2
+			intrigue = 1
 			monthly_character_prestige = 0.1
 			build_cost_temple_modifier = -0.1
 			build_time_temple_modifier = -0.1
@@ -176,9 +180,9 @@ thalmor = {
 		limit = 1
 		startup_limit = 1
 		modifier = {
+			learning = 2
+			intrigue = 2
 			monthly_character_prestige = 0.5
-			build_cost_temple_modifier = -0.2
-			build_time_temple_modifier = -0.3
 		}
 	}
 	

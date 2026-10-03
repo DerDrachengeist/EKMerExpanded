@@ -1,0 +1,67 @@
+###
+weapon_sword_justiciar = {
+	monthly_character_prestige = 0.05
+	martial = 3
+	
+	combat_rating = 9
+	
+	active = {
+		can_use_swords = yes
+	}
+
+	picture = "GFX_weapon_sword_justiciar"
+	stacking = yes
+	slot = weapon
+	quality = 2
+	flags = {
+		combat_weapon
+		sword
+		craftable
+		theft_dr_average
+		quality_normal
+	}
+}
+weapon_sword_justiciar_superior = {
+	monthly_character_prestige = 0.1
+	martial = 3
+	
+	combat_rating = 11
+	
+	active = {
+		can_use_swords = yes
+	}
+
+	picture = "GFX_weapon_sword_justiciar"
+	stacking = yes
+	slot = weapon
+	quality = 3
+	flags = {
+		combat_weapon
+		sword
+		craftable
+		theft_dr_average
+		quality_superior
+	}
+}
+weapon_sword_justiciar_flawless = {
+	monthly_character_prestige = 0.20
+	martial = 4
+	
+	combat_rating = 13
+	
+	active = {
+		can_use_swords = yes
+	}
+
+	picture = "GFX_weapon_sword_justiciar"
+	stacking = yes
+	slot = weapon
+	quality = 4 #no, no I did not. fixed now!
+	flags = {
+		combat_weapon
+		sword
+		craftable
+		theft_dr_hard
+		quality_flawless #you know, I've been mindlessly adding these tags to every artifact variant I create but I have no idea what I'd even use them for...
+	}
+}

@@ -494,12 +494,12 @@ spriteTypes = {
 	##### Thalmor #####
 
 	spriteType = {
-		name = "GFX_society_main_background_thalmor"
+		name = "GFX_society_main_background_thalmor_tamriel"
 		texturefile = "gfx\\interface\\societies\\society_bg_thalmor.dds"
 	}
 
 	spriteType = {
-		name = "GFX_icon_small_thalmor"
+		name = "GFX_icon_small_thalmor_tamriel"
 		texturefile = "gfx\\interface\\societies\\symbol_small_thalmor.dds"
 		noOfFrames = 2
 	}
