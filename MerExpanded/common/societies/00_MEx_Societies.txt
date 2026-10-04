@@ -191,7 +191,7 @@ thalmor_tamriel = {
 	}
 	
 	monthly_currency_gain = {
-		name = currency_name_mages_guild_tamriel
+		name = currency_name_thalmor_tamriel
 		
 		per_attribute = {
     		name = learning

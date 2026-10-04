@@ -12,6 +12,6 @@ thalmor_tamriel_rank_5_male;High Emissary;;;;;;;;;;;;;x
 thalmor_tamriel_rank_5_female;High Emissary;;;;;;;;;;;;;x
 thalmor_tamriel_leader_desc;The High Emissary of the Thalmor.;;;;;;;;;;;;;x
 currency_name_thalmor_tamriel;influence;;;;;;;;;;;;;x
-join_the_thalmor;Join the Thalmor;;;;;;;;;;;;;x
-join_the_thalmor_desc;Order [Root.GetFirstName] to join the Thalmor. [Root.GetFirstName] will be granted the rank of Agent and can immediately take on Guild jobs and study Specializations if there are any available to [Root.GetHerHim].;;;;;;;;;;;;;x
+join_the_thalmor_tamriel;Join the Thalmor;;;;;;;;;;;;;x
+join_the_thalmor_tamriel_desc;Order [Root.GetFirstName] to join the Thalmor. [Root.GetFirstName] will be granted the rank of Agent and can immediately take on Guild jobs and study Specializations if there are any available to [Root.GetHerHim].;;;;;;;;;;;;;x
 eksocieties50Thalmor;Thanks to my contact in the Thalmor, I have access to some of the finest trainers and instructors available. With their help, I can receive training in a variety of advanced specializations.;;;;;;;;;;;;;x
