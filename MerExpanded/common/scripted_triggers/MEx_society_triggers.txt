@@ -1,0 +1,74 @@
+is_member_generic_guild = {
+	OR = {
+		society_member_of = thalmor_tamriel
+	}
+}
+
+is_member_society_5_ranks = {
+	custom_tooltip = {
+		text = IS_MEMBER_SOCIETY_5_RANKS_CT
+		OR = {
+		society_member_of = thalmor_tamriel
+		}
+	}
+}
+### Specialization
+is_in_society_allows_specialisation = {
+	OR = {
+		society_member_of = thalmor_tamriel
+	}
+}
+is_studying_thalmor_specialization = {
+	OR = {
+		has_character_flag = thalmor_tamriel_assassin
+		has_character_flag = thalmor_tamriel_battlemage
+		has_character_flag = thalmor_tamriel_healer
+		has_character_flag = thalmor_tamriel_priest
+		has_character_flag = thalmor_tamriel_rogue
+		has_character_flag = thalmor_tamriel_nightblade
+		has_character_flag = thalmor_tamriel_savant
+		has_character_flag = thalmor_tamriel_sorcerer
+		has_character_flag = thalmor_tamriel_spellsword
+		has_character_flag = thalmor_tamriel_witchhunter
+	}
+}
+
+#
+is_studying_specialization = {
+	OR = {
+		is_studying_thalmor_specialization = yes
+	}
+}
+#
+society_and_specialization_match = {
+	OR = {
+		AND = {
+			society_member_of = thalmor_tamriel
+			is_studying_thalmor_specialization = yes
+		}
+	}
+}
+
+#
+can_actually_level_up_specialization = {
+	NOT = {
+		has_maxed_specializations = yes
+	}
+	OR = {
+		AND = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				is_assassin = yes
+				is_battlemage = yes
+				is_healer = yes
+				is_priest_education = yes
+				is_rogue = yes
+				is_nightblade = yes
+				is_savant = yes
+				is_sorcerer = yes
+				is_spellsword = yes
+				is_witchhunter = yes
+			}
+		}
+	}
+}
