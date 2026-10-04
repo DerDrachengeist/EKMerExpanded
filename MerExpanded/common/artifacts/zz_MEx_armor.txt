@@ -24,7 +24,7 @@ robe_thalmor = {
 	slot = torso
 		
 	active = {
-		society_member_of = thalmor
+		society_member_of = thalmor_tamriel
 		can_wear_light_armor = yes
 	}
 	
@@ -53,7 +53,7 @@ robe_thalmor_superior = {
 	slot = torso
 		
 	active = {
-		society_member_of = thalmor
+		society_member_of = thalmor_tamriel
 		can_wear_light_armor = yes
 	}
 	
@@ -82,7 +82,7 @@ robe_thalmor_flawless = {
 	slot = torso
 		
 	active = {
-		society_member_of = thalmor
+		society_member_of = thalmor_tamriel
 		can_wear_light_armor = yes
 	}
 	

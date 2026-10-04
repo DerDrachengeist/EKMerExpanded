@@ -1,6 +1,7 @@
 thalmor_tamriel = {
 	primary_attribute = learning
 	society_ranks_gfx = thalmor_society_ranks
+	society_rank_up_decision = request_to_rank_up_within_society
 	opinion_to_other_members = +10
 	opinion_per_rank_above = +5
 	#sound = hermetic_society_interface

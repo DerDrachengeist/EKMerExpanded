@@ -493,7 +493,7 @@ letter_event = {
 		
 		if = {
 			limit = { has_character_flag = thalmor_tamriel_acceptance }
-			join_society = thalmor_tamriel_council
+			join_society = thalmor_tamriel
 		}
 
 		if = {
