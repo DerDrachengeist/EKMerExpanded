@@ -2993,6 +2993,56 @@ character_event = {
 		set_character_flag = house_dagoth_healer
 	}
 	#
+	#Thalmor Options
+	#
+	option = { #Become an Assassin
+		name = eksocieties50Assassin
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = assassin_1
+				trait = assassin_2
+				NOR = {
+					trait = assassin_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = assassin_study_tooltip }
+		set_character_flag = thalmor_assassin
+	}
+	option = { #Become a Battlemage
+		name = eksocieties50Battlemage
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = battlemage_1
+				trait = battlemage_2
+				NOR = {
+					trait = battlemage_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = battlemage_study_tooltip }
+		set_character_flag = thalmor_battlemage
+	}
+	option = { #Become a Healer
+		name = eksocieties50Healer
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = healer_1
+				trait = healer_2
+				NOR = {
+					trait = healer_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = healer_study_tooltip }
+		set_character_flag = thalmor_healer
+	}	#
 	#Elder Council Options
 	#
 	option = { #Become a Bard
@@ -3137,6 +3187,13 @@ character_event = {
 		picture = GFX_evt_library
 		trigger = {
 			society_member_of = elder_council
+		}
+	}
+	desc = {
+		text = eksocieties50Thalmor
+		picture = GFX_evt_library
+		trigger = {
+			society_member_of = thalmor_tamriel
 		}
 	}
 	
@@ -3966,6 +4023,57 @@ character_event = {
 		set_character_flag = house_dagoth_nightblade
 	}
 	#
+	#Thalmor Options
+	#
+	option = { #Become a Priest
+		name = eksocieties50Priest
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = priest_1
+				trait = priest_2
+				NOR = {
+					trait = priest_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = priest_study_tooltip }
+		set_character_flag = thalmor_priest
+	}
+	option = { #Become a Rogue
+		name = eksocieties50Rogue
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = rogue_1
+				trait = rogue_2
+				NOR = {
+					trait = rogue_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = rogue_study_tooltip }
+		set_character_flag = thalmor_rogue
+	}	
+	option = { #Become a Nightblade
+		name = eksocieties50Nightblade
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = nightblade_1
+				trait = nightblade_2
+				NOR = {
+					trait = nightblade_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = nightblade_study_tooltip }
+		set_character_flag = thalmor_nightblade
+	}
+	#
 	#Elder Council Options
 	#
 	option = { #Become a Crusader
@@ -4109,6 +4217,13 @@ character_event = {
 		picture = GFX_evt_library
 		trigger = {
 			society_member_of = elder_council
+		}
+	}
+	desc = {
+		text = eksocieties50Thalmor
+		picture = GFX_evt_library
+		trigger = {
+			society_member_of = thalmor_tamriel
 		}
 	}
 	
@@ -4938,6 +5053,57 @@ character_event = {
 		set_character_flag = house_dagoth_spellsword
 	}
 	#
+	#Thalmor Options
+	#
+	option = { #Become a Savant
+		name = eksocieties50Savant
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = savant_1
+				trait = savant_2
+				NOR = {
+					trait = savant_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = savant_study_tooltip }
+		set_character_flag = thalmor_savant
+	}
+	option = { #Become a Sorcerer
+		name = eksocieties50Sorcerer
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = sorcerer_1
+				trait = sorcerer_2
+				NOR = {
+					trait = sorcerer_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = sorcerer_study_tooltip }
+		set_character_flag = thalmor_sorcerer
+	}
+	option = { #Become a Spellsword
+		name = eksocieties50Spellsword
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = spellsword_1
+				trait = spellsword_2
+				NOR = {
+					trait = spellsword_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = spellsword_study_tooltip }
+		set_character_flag = thalmor_spellsword
+	}
+	#
 	#Elder Council Options
 	#
 	option = { #Become a Trader
@@ -5082,6 +5248,13 @@ character_event = {
 		picture = GFX_evt_library
 		trigger = {
 			society_member_of = elder_council
+		}
+	}
+	desc = {
+		text = eksocieties50Thalmor
+		picture = GFX_evt_library
+		trigger = {
+			society_member_of = thalmor_tamriel
 		}
 	}
 	
@@ -5383,6 +5556,25 @@ character_event = {
 		}
 		custom_tooltip = { text = witchhunter_study_tooltip }
 		set_character_flag = house_dagoth_witchhunter
+	}
+	#
+	#Thalmor Options
+	#
+	option = { #Become a Witchhunter
+		name = eksocieties50Witchhunter
+		trigger = {
+			society_member_of = thalmor_tamriel
+			OR = {
+				trait = witchhunter_1
+				trait = witchhunter_2
+				NOR = {
+					trait = witchhunter_3
+					has_two_specializations = yes
+				}
+			}
+		}
+		custom_tooltip = { text = witchhunter_study_tooltip }
+		set_character_flag = thalmor_witchhunter
 	}
 	#
 	#Elder Council Options
@@ -7963,7 +8155,7 @@ character_event = {
 		}
 		if = {
 			limit = { 
-				society_member_of = house_dagoth_council
+				society_member_of = thalmor_tamriel
 			}
 			random_list = {
 				10 = {
@@ -7980,7 +8172,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_assassin
+					set_character_flag = thalmor_assassin
 				}
 				10 = {
 					modifier = {
@@ -7996,7 +8188,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_battlemage
+					set_character_flag = thalmor_battlemage
 				}				
 				10 = {
 					modifier = {
@@ -8012,7 +8204,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_healer
+					set_character_flag = thalmor_healer
 				}
 				10 = {
 					modifier = {
@@ -8028,23 +8220,23 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_priest
+					set_character_flag = thalmor_priest
 				}
 				10 = {
 					modifier = {
 						factor = 0
 						OR = {
-							trait = monk_3
+							trait = rogue_3
 							AND = {
 								has_two_specializations = yes
 								NOR = {
-									trait = monk_1
-									trait = monk_2
+									trait = rogue_1
+									trait = rogue_2
 								}
 							}
 						}
 					}
-					set_character_flag = house_dagoth_monk
+					set_character_flag = thalmor_rogue
 				}
 				10 = {
 					modifier = {
@@ -8060,7 +8252,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_nightblade
+					set_character_flag = thalmor_nightblade
 				}
 				10 = {
 					modifier = {
@@ -8076,7 +8268,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_savant
+					set_character_flag = thalmor_savant
 				}
 				10 = {
 					modifier = {
@@ -8092,7 +8284,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_sorcerer
+					set_character_flag = thalmor_sorcerer
 				}
 				10 = {
 					modifier = {
@@ -8108,7 +8300,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_spellsword
+					set_character_flag = thalmor_spellsword
 				}
 				10 = {
 					modifier = {
@@ -8124,7 +8316,7 @@ character_event = {
 							}
 						}
 					}
-					set_character_flag = house_dagoth_witchhunter
+					set_character_flag = thalmor_witchhunter
 				}
 			}
 		}
@@ -8483,6 +8675,7 @@ character_event = {
 				has_character_flag = house_sadras_assassin
 				has_character_flag = house_sul_assassin
 				has_character_flag = house_dagoth_assassin
+				has_character_flag = thalmor_assassin
 			}
 			NOR = {
 				trait = assassin_2
@@ -8524,6 +8717,7 @@ character_event = {
 				has_character_flag = house_sadras_assassin
 				has_character_flag = house_sul_assassin
 				has_character_flag = house_dagoth_assassin
+				has_character_flag = thalmor_assassin
 			}
 		}
 		if = {
@@ -8889,6 +9083,7 @@ character_event = {
 				has_character_flag = house_sul_battlemage
 				has_character_flag = house_dagoth_battlemage
 				has_character_flag = elder_council_battlemage
+				has_character_flag = thalmor_battlemage
 			}
 			NOR = {
 				trait = battlemage_2
@@ -8929,6 +9124,7 @@ character_event = {
 				has_character_flag = house_sul_battlemage
 				has_character_flag = house_dagoth_battlemage
 				has_character_flag = elder_council_battlemage
+				has_character_flag = thalmor_battlemage
 			}
 		}
 		if = {
@@ -9164,6 +9360,7 @@ character_event = {
 				has_character_flag = house_telvanni_healer
 				has_character_flag = house_veloth_healer
 				has_character_flag = house_dagoth_healer
+				has_character_flag = thalmor_healer
 			}
 			NOR = {
 				trait = healer_2
@@ -9203,6 +9400,7 @@ character_event = {
 				has_character_flag = house_telvanni_healer
 				has_character_flag = house_veloth_healer
 				has_character_flag = house_dagoth_healer
+				has_character_flag = thalmor_healer
 			}
 		}
 		if = {
@@ -9572,6 +9770,7 @@ character_event = {
 				has_character_flag = house_sadras_nightblade
 				has_character_flag = house_dagoth_nightblade
 				has_character_flag = elder_council_nightblade
+				has_character_flag = thalmor_nightblade
 			}
 			NOR = {
 				trait = nightblade_2
@@ -9612,6 +9811,7 @@ character_event = {
 				has_character_flag = house_sadras_nightblade
 				has_character_flag = house_dagoth_nightblade
 				has_character_flag = elder_council_nightblade
+				has_character_flag = thalmor_nightblade
 			}
 		}
 		if = {
@@ -9709,6 +9909,7 @@ character_event = {
 				has_character_flag = house_veloth_priest
 				has_character_flag = house_sul_priest
 				has_character_flag = house_dagoth_priest
+				has_character_flag = thalmor_priest
 			}
 			NOR = {
 				trait = priest_2
@@ -9749,6 +9950,7 @@ character_event = {
 				has_character_flag = house_veloth_priest
 				has_character_flag = house_sul_priest
 				has_character_flag = house_dagoth_priest
+				has_character_flag = thalmor_priest
 			}
 		}
 		if = {
@@ -9845,6 +10047,7 @@ character_event = {
 				has_character_flag = house_redoran_rogue
 				has_character_flag = house_veloth_rogue
 				has_character_flag = house_sul_rogue
+				has_character_flag = thalmor_rogue
 			}
 			NOR = {
 				trait = rogue_2
@@ -9983,6 +10186,7 @@ character_event = {
 				has_character_flag = house_veloth_savant
 				has_character_flag = house_dagoth_savant
 				has_character_flag = elder_council_savant
+				has_character_flag = thalmor_savant
 			}
 			NOR = {
 				trait = savant_2
@@ -10025,6 +10229,7 @@ character_event = {
 				has_character_flag = house_veloth_savant
 				has_character_flag = house_dagoth_savant
 				has_character_flag = elder_council_savant
+				has_character_flag = thalmor_savant
 			}
 		}
 		if = {
@@ -10253,6 +10458,7 @@ character_event = {
 				has_character_flag = house_telvanni_sorcerer
 				has_character_flag = house_dagoth_sorcerer
 				has_character_flag = elder_council_sorcerer
+				has_character_flag = thalmor_sorcerer
 			}
 			NOR = {
 				trait = sorcerer_2
@@ -10291,6 +10497,7 @@ character_event = {
 				has_character_flag = house_telvanni_sorcerer
 				has_character_flag = house_dagoth_sorcerer
 				has_character_flag = elder_council_sorcerer
+				has_character_flag = thalmor_sorcerer
 			}
 		}
 		if = {
@@ -10387,6 +10594,7 @@ character_event = {
 				has_character_flag = house_telvanni_spellsword
 				has_character_flag = house_sul_spellsword
 				has_character_flag = house_dagoth_spellsword
+				has_character_flag = thalmor_spellsword
 			}
 			NOR = {
 				trait = spellsword_2
@@ -10426,6 +10634,7 @@ character_event = {
 				has_character_flag = house_telvanni_spellsword
 				has_character_flag = house_sul_spellsword
 				has_character_flag = house_dagoth_spellsword
+				has_character_flag = thalmor_spellsword
 			}
 		}
 		if = {
@@ -10931,6 +11140,7 @@ character_event = {
 				has_character_flag = house_sadras_witchhunter
 				has_character_flag = house_sul_witchhunter
 				has_character_flag = house_dagoth_witchhunter
+				has_character_flag = thalmor_witchhunter
 			}
 			NOR = {
 				trait = witchhunter_2
@@ -10972,6 +11182,7 @@ character_event = {
 				has_character_flag = house_sadras_witchhunter
 				has_character_flag = house_sul_witchhunter
 				has_character_flag = house_dagoth_witchhunter
+				has_character_flag = thalmor_witchhunter
 			}
 		}
 		if = {

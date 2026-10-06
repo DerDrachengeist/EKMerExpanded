@@ -28,7 +28,6 @@ is_member_great_house_society = {
 				society_member_of = house_sul_council
 				society_member_of = house_veloth_council
 				society_member_of = house_dagoth_council
-				society_member_of = thalmor_tamriel
 			}
 		}
 	}

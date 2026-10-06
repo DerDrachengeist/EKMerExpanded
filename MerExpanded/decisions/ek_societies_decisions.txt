@@ -647,14 +647,6 @@ society_decisions = {
 					is_member_society_5_ranks = yes
 					society_rank >= 4
 				}
-				AND = {
-					is_member_society_6_ranks = yes
-					society_rank >= 4
-				}
-				AND = {
-					is_member_society_7_ranks = yes
-					society_rank >= 5
-				}
 			}
 			
 			NOT = { has_character_flag = choosing_lifestyle_society }
