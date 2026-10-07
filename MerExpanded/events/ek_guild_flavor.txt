@@ -4028,6 +4028,611 @@ character_event = {
 }
 
 #########################
+# Thalmor               #
+#########################
+character_event = {
+	id = meguildflavor.200
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = { # Trivial quest
+				society_quest_event = { id = meguildflavor.201 }
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_trivial_quest = yes }
+				}
+			}
+			
+			10 = { # Easy quest
+				society_quest_event = { id = meguildflavor.203 }
+
+				modifier = {
+					factor = 0
+					NOT = { can_get_easy_quest = yes }
+				}
+			}
+			
+			10 = { # Medium quest
+				society_quest_event = { id = meguildflavor.205 }
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_medium_quest = yes }
+				}
+			}
+			
+			10 = { # Hard quest
+				society_quest_event = { id = meguildflavor.207 }
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_hard_quest = yes }
+				}
+			}
+			
+			10 = { # Very hard quest
+				society_quest_event = { id = meguildflavor.209 }
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_very_hard_quest = yes }
+				}
+			}
+			
+			5 = { # Alchemy (scales with rank)
+				society_quest_event = { id = meguildflavor.211 }
+				
+				modifier = {
+					factor = 2
+					trait = alchemist
+				}
+				
+				modifier = {
+					factor = 0.5
+					has_character_flag = no_alchemy_for_me
+				}
+			}
+		}
+	}
+}
+
+### Trivial quests
+# Deliver supplies, Recharge equipment
+society_quest_event = {
+	id = meguildflavor.201
+	
+	desc = { # Bring supplies to another guild hall
+		text = ekguildflavor201A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = { # Recharge some of your sisters and brothers enchanted gear
+		text = ekguildflavor201B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { set_character_flag = quest_desc_1 }
+			20 = { set_character_flag = quest_desc_2 }
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = trivial_quest
+		character_event = { id = meguildflavor.202 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.202
+	picture = GFX_evt_battle
+	
+	desc = {
+		text = ekguildflavor202A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor202B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		clr_quest = trivial_quest
+		
+		give_trivial_quest_reward = yes
+		
+		clr_character_flag = quest_desc_1
+		clr_character_flag = quest_desc_2
+	}
+}
+
+### Easy quests
+# Teach novices in Restoration [include other schools]
+society_quest_event = {
+	id = meguildflavor.203
+	
+	desc = { # Teach Restoration
+		text = ekguildflavor203A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = { # Teach Destruction
+		text = ekguildflavor203B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	desc = { # Teach Alteration
+		text = ekguildflavor203C
+		trigger = { has_character_flag = quest_desc_3 }
+	}
+	
+	desc = { # Teach Illusion
+		text = ekguildflavor203D
+		trigger = { has_character_flag = quest_desc_4 }
+	}
+	
+	desc = { # Teach Conjuration
+		text = ekguildflavor203E
+		trigger = { has_character_flag = quest_desc_5 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { set_character_flag = quest_desc_1 }
+			20 = { set_character_flag = quest_desc_2 }
+			20 = { set_character_flag = quest_desc_3 }
+			20 = { set_character_flag = quest_desc_4 }
+			20 = { set_character_flag = quest_desc_5 }
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = easy_quest
+		
+		roll_easy_learning = yes
+		character_event = { id = meguildflavor.204 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.204
+	picture = GFX_evt_battle
+	
+	desc = {
+		text = ekguildflavor204A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor204B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	desc = {
+		text = ekguildflavor204C
+		trigger = { has_character_flag = quest_desc_3 }
+	}
+	
+	desc = {
+		text = ekguildflavor204D
+		trigger = { has_character_flag = quest_desc_4 }
+	}
+	
+	desc = {
+		text = ekguildflavor204E
+		trigger = { has_character_flag = quest_desc_5 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		
+		send_quest_result_stat = yes
+		
+		easy_quest_stat_result = yes
+	}
+}
+
+### Medium Quest
+# Enchant stuff, Charge scrolls
+society_quest_event = {
+	id = meguildflavor.205
+	
+	desc = { # Enchant a piece of equipment
+		text = ekguildflavor205A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = { # Charge some scrolls
+		text = ekguildflavor205B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { set_character_flag = quest_desc_1 }
+			20 = { set_character_flag = quest_desc_2 }
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = medium_quest
+		
+		roll_medium_learning = yes
+		character_event = { id = meguildflavor.206 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.206
+	picture = GFX_evt_battle
+	
+	desc = {
+		text = ekguildflavor206A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor206B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		
+		send_quest_result_stat = yes
+		
+		medium_quest_stat_result = yes
+	}
+}
+
+### Hard quest
+# Decipher an unknown scroll, disenchant an unknown item
+society_quest_event = {
+	id = meguildflavor.207
+	
+	desc = { # Decipher unknwon scroll
+		text = ekguildflavor207A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = { # Disenchant unknown item
+		text = ekguildflavor207B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { set_character_flag = quest_desc_1 }
+			20 = { set_character_flag = quest_desc_2 }
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = hard_quest
+		
+		roll_hard_learning = yes
+		character_event = { id = meguildflavor.208 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.208
+	picture = GFX_evt_battle
+	
+	desc = {
+		text = ekguildflavor208A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor208B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		
+		send_quest_result_stat = yes
+		
+		hard_quest_stat_result = yes
+	}
+}
+
+### Very hard Quest
+# Cure a Daedric curse, destroy a cursed item
+society_quest_event = {
+	id = meguildflavor.209
+	
+	desc = { # Cure a Daedric Curse
+		text = ekguildflavor209A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = { # Destroy a cursed item
+		text = ekguildflavor209B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			20 = { set_character_flag = quest_desc_1 }
+			20 = { set_character_flag = quest_desc_2 }
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = very_hard_quest
+		
+		roll_very_hard_learning = yes
+		character_event = { id = meguildflavor.210 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.210
+	picture = GFX_evt_battle
+	
+	desc = {
+		text = ekguildflavor210A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor210B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		
+		send_quest_result_stat = yes
+		
+		very_hard_quest_stat_result = yes
+	}
+}
+
+### General Quest
+# Brew a potion
+society_quest_event = {
+	id = meguildflavor.211
+	
+	desc = {
+		text = ekguildflavor211A
+		trigger = { has_character_flag = quest_desc_1 }
+	}
+	
+	desc = {
+		text = ekguildflavor211B
+		trigger = { has_character_flag = quest_desc_2 }
+	}
+	
+	desc = {
+		text = ekguildflavor211C
+		trigger = { has_character_flag = quest_desc_3 }
+	}
+	
+	desc = {
+		text = ekguildflavor211D
+		trigger = { has_character_flag = quest_desc_4 }
+	}
+	
+	desc = {
+		text = ekguildflavor211E
+		trigger = { has_character_flag = quest_desc_5 }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			10 = { # Trivial quest
+				set_character_flag = quest_desc_1
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_trivial_quest = yes }
+				}
+			}
+			
+			10 = { # Easy quest
+				set_character_flag = quest_desc_2
+
+				modifier = {
+					factor = 0
+					NOT = { can_get_easy_quest = yes }
+				}
+			}
+			
+			10 = { # Medium quest
+				set_character_flag = quest_desc_3
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_medium_quest = yes }
+				}
+			}
+			
+			10 = { # Hard quest
+				set_character_flag = quest_desc_4
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_hard_quest = yes }
+				}
+			}
+			
+			10 = { # Very hard quest
+				set_character_flag = quest_desc_5
+				
+				modifier = {
+					factor = 0
+					NOT = { can_get_very_hard_quest = yes }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		set_quest = alchemy_quest
+		
+		if = {
+			limit = {
+				has_character_flag = quest_desc_1
+			}
+			roll_trivial_learning = yes
+		}
+		
+		else_if = {
+			limit = {
+				has_character_flag = quest_desc_2
+			}
+			roll_easy_learning = yes
+		}
+		
+		else_if = {
+			limit = {
+				has_character_flag = quest_desc_3
+			}
+			roll_medium_learning = yes
+		}
+		
+		else_if = {
+			limit = {
+				has_character_flag = quest_desc_4
+			}
+			roll_hard_learning = yes
+		}
+		
+		else_if = {
+			limit = {
+				has_character_flag = quest_desc_5
+			}
+			roll_very_hard_learning = yes
+		}
+		
+		character_event = { id = meguildflavor.212 days = 3 }
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = EKGuildQuestsDeclineTooltip }
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+	}
+}
+
+character_event = {
+	id = meguildflavor.212
+	picture = GFX_evt_battle
+	
+	desc = meguildflavor.212.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ekguildflavorAccept
+		
+		send_quest_result_stat = yes
+		
+		generic_quest_stat_result = yes
+		
+		clr_quest = alchemy_quest
+		random = { # Only sent if the quest is a success
+			chance = 25
+			modifier = {
+				factor = 0
+				OR = {
+					has_character_flag = no_alchemy_for_me 
+					lifestyle_traits = 1
+					trait = alchemist
+				}
+			}
+			society_propose_alchemist = yes
+		}
+	}
+}
+
+#########################
 # MAGISTRATES           #
 #########################
 character_event = {
@@ -8832,7 +9437,7 @@ character_event = {
 				}
 				tombola_minor_quest = {
 					clr_character_flag = tombola_minor_quest
-					character_event = { id = ekguildflavor.200 }
+					character_event = { id = meguildflavor.200 }
 				}
 			}
 		}
