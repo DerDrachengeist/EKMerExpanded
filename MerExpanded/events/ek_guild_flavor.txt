@@ -2112,7 +2112,10 @@ society_quest_event = {
 		text = ekguildflavor.95.d.mage
 		
 		trigger = {
+			OR = {
 			is_member_of_mages_guild = yes
+			society_member_of = thalmor_tamriel
+			}
 		}
 	}
 	
@@ -2189,7 +2192,10 @@ society_quest_event = {
 		
 		trigger_else_if = {
 			limit = {
+				OR = {
 				is_member_of_mages_guild = yes
+				society_member_of = thalmor_tamriel
+				}
 			}
 			NOR = {
 				has_focus = focus_scholarship
@@ -2274,7 +2280,10 @@ society_quest_event = {
 	
 	option = {
 		trigger = {
+			OR = {
 			is_member_of_mages_guild = yes
+			society_member_of = thalmor_tamriel
+			}
 		}
 		name = ACCEPT
 		set_quest = quest_mage_focus
@@ -8773,7 +8782,7 @@ character_event = {
 						set_character_flag = tombola_minor_quest
 						
 						event_target:society_leader = {
-							character_event = { id = ekguildflavor.26 }
+							character_event = { id = meguildflavor.26 }
 						}
 					}
 					
@@ -8797,7 +8806,7 @@ character_event = {
 						set_character_flag = tombola_focus
 						
 						event_target:society_leader = {
-							character_event = { id = ekguildflavor.26 }
+							character_event = { id = meguildflavor.26 }
 						}
 					}
 				}
